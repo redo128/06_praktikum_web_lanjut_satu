@@ -16,4 +16,4 @@ use Illuminate\Http\Request;
 */
 
 Route::resource('mahasiswa', MahasiswaController::class);
-Route::get('/mahasiswacoba', MahasiswaController::class,'mhs3');
+Route::get('/mahasiswacoba', MahasiswaContoller::class,'mhs3');
