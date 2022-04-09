@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Http\Request;
 
 /*
@@ -16,4 +17,7 @@ use Illuminate\Http\Request;
 */
 
 Route::resource('mahasiswa', MahasiswaController::class);
-Route::get('/mahasiswacoba', MahasiswaContoller::class,'mhs3');
+Route::get('/search', [SearchController::class, 'search'])->name('search');
+Route::get('/awawa', function () {
+    echo 'PE';
+});

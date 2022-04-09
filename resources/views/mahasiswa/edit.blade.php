@@ -47,6 +47,10 @@
  <label for="Jurusan">Alamat</label>
  <input type="text" name="Alamat" class="form-control" id="Alamat" value="{{ $Mahasiswa->alamat }}" ariadescribedby="Alamat" >
  </div>
+ <div class="form-group">
+ <label for="TanggalLahir">TanggalLahir</label>
+ <input type="TanggalLahir" name="TanggalLahir" class="form-control" id="TanggalLahir" value="{{ $Mahasiswa->TanggalLahir }}" ariadescribedby="TanggalLahir" >
+ </div>
  <button type="submit" class="btn btn-primary">Submit</button>
  </form>
  </div>

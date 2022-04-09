@@ -38,22 +38,17 @@
  <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" ariadescribedby="Jurusan" >
  </div>
  <div class="form-group">
- <label for="Jurusan">Email</label>
- <input type="email" name="Email" class="form-control" id="email" ariadescribedby="Email" >
+ <label for="Email">Email</label>
+ <input type="Email" name="Email" class="form-control" id="Email" ariadescribedby="Email" >
  </div>
  <div class="form-group">
- <label for="Jurusan">Alamat</label>
- <input type="text" name="Alamat" class="form-control" id="Alamat" ariadescribedby="Alamat" >
+ <label for="Alamat">Alamat</label>
+ <input type="Alamat" name="Alamat" class="form-control" id="Alamat" ariadescribedby="Alamat" >
  </div>
  <div class="form-group">
- <label for="Jurusan">Tanggal Lahir</label>
- <input type="date" name="TanggalLahir" class="form-control" id="TanggalLahir" ariadescribedby="TanggalLahir" >
+ <label for="TanggalLahir">Tanggal Lahir</label>
+ <input type="TanggalLahir" name="TanggalLahir" class="form-control" id="TanggalLahir" ariadescribedby="TanggalLahir" >
  </div>
- <script type="text/javascript">
-      $(".TanggalLahir").datepicker({
-        format: "yyyy-mm-dd",
-      });
-    </script>
  <button type="submit" class="btn btn-primary">Submit</button>
  </form>
  </div>
