@@ -11,19 +11,19 @@ use App\Models\Kelas;
 class Mahasiswa extends Model
 {
     protected $table='mahasiswa'; // Eloquent akan membuat model mahasiswa menyimpan record di tabel mahasiswa
-     protected $primaryKey = 'Nim'; // Memanggil isi DB Dengan primarykey
+     protected $primaryKey = 'nim'; // Memanggil isi DB Dengan primarykey
      /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
      protected $fillable = [
-     'Nim',
-     'Nama',
-     'Kelas_id',
-     'Jurusan',
-     'Email',
-     'Alamat',
+     'nim',
+     'nama',
+     'kelas_id',
+     'jurusan',
+     'email',
+     'alamat',
      'TanggalLahir',
      ];
      public function kelas(){
