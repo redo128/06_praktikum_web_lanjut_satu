@@ -65,7 +65,8 @@
             @method('DELETE')
             <button type="submit" class="btn btn-danger">Delete</button>
         </form>
-        </td>
+        <a class="btn btn-warning" href="{{ url('nilai/'.$mhs->id_mahasiswa) }}">Nilai</a>
+    </td>
     </tr>
     @endforeach
     </table>

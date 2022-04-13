@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\Mahasiswa_Matakuliah;
 use Illuminate\Http\Request;
 
 /*
@@ -18,6 +19,7 @@ use Illuminate\Http\Request;
 
 Route::resource('mahasiswa', MahasiswaController::class);
 Route::get('/search', [SearchController::class, 'search'])->name('search');
-Route::get('/awawa', function () {
-    echo 'PE';
-});
+// Route::get('/nilai/{$nim}', function () {
+//     return view('mahasiswa.nilai');
+// });
+Route::get('nilai/{id}', [MahasiswaController::class, 'nilai'])->name('nilai');

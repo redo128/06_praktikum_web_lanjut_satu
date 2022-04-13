@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use App\Models\Mahasiswa;
 use App\Models\Kelas;
+use App\Models\Mahasiswa_Matakuliah;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class MahasiswaController extends Controller
@@ -22,6 +23,13 @@ class MahasiswaController extends Controller
         $paginate=Mahasiswa::orderby('id_mahasiswa','asc')->paginate(3);
         return view('mahasiswa.index',['mahasiswa'=>$mahasiswa,'paginate'=>$paginate]);
               //  with('i', (request()->input('page', 1) - 1) * 5);
+        }
+        public function nilai($id){
+
+            $daftar = Mahasiswa_MataKuliah::with("matakuliah")->where("mahasiswa_id", $id)->get();
+            $daftar->mahasiswa = Mahasiswa::with('kelas')->where('id_mahasiswa', $id)->first();
+        //    dd($daftar);
+            return view('mahasiswa.nilai', compact('daftar'));
         }
     public function create()
         {
